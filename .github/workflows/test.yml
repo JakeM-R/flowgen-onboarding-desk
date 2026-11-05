@@ -1,0 +1,21 @@
+name: Test
+
+# GitHub Pages deploys this repo from the main branch (index.html at the root).
+# This workflow only runs the engine tests on each push.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
