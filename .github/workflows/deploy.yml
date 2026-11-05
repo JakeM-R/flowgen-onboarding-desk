@@ -26,9 +26,10 @@ jobs:
         with:
           node-version: 22
       - run: npm test
+      - run: mkdir _site && cp index.html .nojekyll _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: _site
       - id: deploy
         uses: actions/deploy-pages@v4

@@ -38,10 +38,10 @@ Built by Jake Makking-Robinson. This is a working draft, not a FlowGen product. 
 
 ## Files
 
-- `public/index.html`: the whole app. `<script id="config">` holds the playbooks and handbook, `<script id="demo">` the demo hires, and `<script id="engine">` the pure logic (plans, states, ranking, nudges, retrieval).
+- `index.html`: the whole app, at the repo root so GitHub Pages serves it whether Pages deploys from the branch or from Actions. `<script id="config">` holds the playbooks and handbook, `<script id="demo">` the demo hires, and `<script id="engine">` the pure logic (plans, states, ranking, nudges, retrieval).
 - `tests/engine.test.mjs`: runs the engine under Node with no dependencies (`npm test`).
-- `.github/workflows/deploy.yml`: runs the tests on every push to `main`, then publishes `public/` to GitHub Pages. It only runs once this folder is the root of its own repository.
+- `.github/workflows/deploy.yml`: runs the tests on every push to `main`, then publishes the page to GitHub Pages.
 
 ## Run locally
 
-Open `public/index.html` in a browser.
+Open `index.html` in a browser.
